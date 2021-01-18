@@ -1,0 +1,32 @@
+<div class="col-12 colreg">
+    <div class="col-12 col-md-6 colregimg">
+        <img src="assets/images/home.png" class="img-fluid imgregcover" />
+    </div>
+    <div class="col-12 col-md-6 colregtxt">
+        <div class="blkregcenter">
+            <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+                <div class="form-inp">
+                    <label for="username">Nome do utilizador: </label>
+                    <input type="username" class="form-control" formControlName="username" required />
+                </div>
+                <div class="form-inp mt-3">
+                    <label for="email">Email do utilizador: </label>
+                    <input type="email" class="form-control" formControlName="email" required />
+                </div>
+                <div class="form-inp mt-3">
+                    <label for="password">Palavra-passe do utilizador: </label>
+                    <input type="password" class="form-control" formControlName="password" required />
+                </div>
+                <div class="form-inp mt-3">
+                    <button type="reset" class="btn btn-primary">Limpar</button>
+                    <button type="submit" class="btn btn-primary ms-2">Criar nova conta</button>
+                </div>
+            </form>
+            <div class="blkbtns mx-auto mt-3">
+                <a routerLink="/login" class="btn btn-primary">Login</a>
+                <a routerLink="/home" class="btn btn-primary ms-2">Voltar</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

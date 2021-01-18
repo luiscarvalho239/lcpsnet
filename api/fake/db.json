@@ -1,0 +1,188 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "text_post": "lorem ipsum...",
+      "date_post": "2021-01-11T15:08:00.000Z",
+      "image_post": "assets/images/posts/cover.jpg",
+      "reactions": [
+        {
+          "id_reaction": 1,
+          "type_reaction": "like",
+          "num_reaction": 1
+        },
+        {
+          "id_reaction": 2,
+          "type_reaction": "dislike",
+          "num_reaction": 0
+        }
+      ],
+      "comments": [
+        {
+          "id_comment": 1,
+          "text_comment": "Nice post 1",
+          "date_comment": "2021-01-11T15:09:00.000Z",
+          "replies": [
+            {
+              "id_reply": 1,
+              "text_reply": "Nice comment 1",
+              "date_reply": "2021-01-11T15:10:00.000Z"
+            }
+          ]
+        }
+      ],
+      "shares": {
+        "id_share": 1,
+        "num_share": 0
+      },
+      "user": {
+        "id_user": 1,
+        "username": "luigi",
+        "image_user": "assets/images/avatars/user.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "text_post": "lorem ipsum 2...",
+      "date_post": "2021-01-11T15:08:00.000Z",
+      "image_post": "assets/images/posts/cover.jpg",
+      "reactions": [
+        {
+          "id_reaction": 1,
+          "type_reaction": "like",
+          "num_reaction": 2
+        },
+        {
+          "id_reaction": 2,
+          "type_reaction": "dislike",
+          "num_reaction": 1
+        }
+      ],
+      "comments": [
+        {
+          "id_comment": 1,
+          "text_comment": "Nice post 2",
+          "date_comment": "2021-01-11T15:09:00.000Z",
+          "replies": [
+            {
+              "id_reply": 1,
+              "text_reply": "Nice comment 1",
+              "date_reply": "2021-01-11T15:10:00.000Z"
+            }
+          ]
+        }
+      ],
+      "shares": {
+        "id_share": 1,
+        "num_share": 0
+      },
+      "user": {
+        "id_user": 2,
+        "username": "sonic",
+        "image_user": "assets/images/avatars/guest.png"
+      }
+    },
+    {
+      "id": 3,
+      "text_post": "lorem ipsum 3...",
+      "date_post": "2021-01-11T15:08:00.000Z",
+      "image_post": "assets/images/posts/cover.jpg",
+      "reactions": [
+        {
+          "id_reaction": 1,
+          "type_reaction": "like",
+          "num_reaction": 2
+        },
+        {
+          "id_reaction": 2,
+          "type_reaction": "dislike",
+          "num_reaction": 1
+        }
+      ],
+      "comments": [
+        {
+          "id_comment": 1,
+          "text_comment": "Nice post 2",
+          "date_comment": "2021-01-11T15:09:00.000Z",
+          "replies": [
+            {
+              "id_reply": 1,
+              "text_reply": "Nice comment 1",
+              "date_reply": "2021-01-11T15:10:00.000Z"
+            }
+          ]
+        }
+      ],
+      "shares": {
+        "id_share": 1,
+        "num_share": 0
+      },
+      "user": {
+        "id_user": 1,
+        "username": "luigi",
+        "image_user": "assets/images/avatars/user.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "text_post": "xd",
+      "date_post": "2021-01-13T14:57:59.453Z",
+      "image_post": "assets/images/posts/cover.jpg",
+      "reactions": [
+        {
+          "id_reaction": 1,
+          "type_reaction": "like",
+          "num_reaction": 0
+        },
+        {
+          "id_reaction": 2,
+          "type_reaction": "dislike",
+          "num_reaction": 0
+        }
+      ],
+      "comments": [
+        {
+          "id_comment": 1,
+          "text_comment": "",
+          "date_comment": "2021-01-13T14:57:59.453Z",
+          "replies": [
+            {
+              "id_reply": 1,
+              "text_reply": "",
+              "date_reply": "2021-01-13T14:57:59.453Z"
+            }
+          ]
+        }
+      ],
+      "shares": {
+        "id_share": 1,
+        "num_share": 0
+      },
+      "user": {
+        "id_user": 1,
+        "username": "luigi",
+        "image_user": "assets/images/avatars/user.jpg"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "luigi",
+      "email": "luigi@localhost.loc",
+      "password": "luigi1234",
+      "image": "assets/images/avatars/user.jpg",
+      "date_birth": "1995-01-01T12:00:00.000Z",
+      "date_joined": "2021-01-11T15:06:00.000Z"
+    },
+    {
+      "id": 2,
+      "username": "sonic",
+      "email": "sonic@localhost.loc",
+      "password": "sonic1234",
+      "image": "assets/images/avatars/guest.png",
+      "date_birth": "1993-01-01T12:00:00.000Z",
+      "date_joined": "2020-12-15T20:12:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+.colhome {
+    display: block;
+    position: relative;
+    padding: 0;
+
+    .colhomeimg {
+        display: block;
+        position: relative;
+    }
+
+    img.imghomecover {
+        display: block;
+        position: relative;
+        object-fit: cover;
+        object-position: top center;
+        width: auto;
+        height: 1000px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    div.imghomecover {
+        display: block;
+        position: relative;
+        background: url('/assets/images/home.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: auto;
+        height: 1000px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .colhometxt {
+        display: block;
+        position: relative;
+        background: gray;
+        padding: 15px;
+
+        .blkhomecenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    }
+
+    .colhomeimg, .colhometxt {
+        float: left;
+        width: 50%;
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .colhomeimg, .colhometxt {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .blkhomecenter {
+        min-height: auto !important;
+    }
+
+    img.imghomecover, div.imghomecover {
+        height: auto !important;
+    }
+}

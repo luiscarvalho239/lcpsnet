@@ -1,0 +1,26 @@
+.colusersprofile {
+    padding: 0;
+
+    .card {
+        margin: 0px -12px;
+    }
+
+    .imgcover {
+        max-height: 600px;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .coluproavatar {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .coluprotxt {
+        margin: 15px auto 0 auto;
+        text-align: center;
+    }
+}

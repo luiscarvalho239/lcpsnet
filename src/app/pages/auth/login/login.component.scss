@@ -1,0 +1,73 @@
+.collog {
+    display: block;
+    position: relative;
+    padding: 0;
+
+    .collogimg {
+        display: block;
+        position: relative;
+    }
+
+    img.imglogcover {
+        display: block;
+        position: relative;
+        object-fit: cover;
+        object-position: top center;
+        width: auto;
+        height: 1000px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    div.imglogcover {
+        display: block;
+        position: relative;
+        background: url('/assets/images/home.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: auto;
+        height: 1000px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .collogtxt {
+        display: block;
+        position: relative;
+        background: gray;
+        padding: 15px;
+
+        .blklogcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            min-height: 100vh;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    .collogimg, .collogtxt {
+        float: left;
+        width: 50%;
+        max-width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .collogimg, .collogtxt {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .blklogcenter {
+        min-height: auto !important;
+    }
+
+    img.imglogcover, div.imglogcover {
+        height: auto !important;
+    }
+}

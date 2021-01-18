@@ -1,0 +1,84 @@
+<div class="col-12 colposts">
+    <form class="formCreatePost" [formGroup]="formCreatePost" (ngSubmit)="createPost()">
+        <div class="form-item mx-auto">
+            <textarea class="form-control txtPost" formControlName="txtPost" cols="1" rows="10" required></textarea>
+        </div>
+        <div class="form-item mt-3 mx-auto">
+            <button type="reset" class="btn btn-secondary btnlimpar">Limpar</button>
+            <button type="submit" class="btn btn-primary btnenviar ms-2">Postar</button>
+        </div>
+    </form>
+    <div class="card mt-3" *ngFor="let ip of infoPosts; index as i" [ngClass]="i > 0 ? 'mt-3' : ''">
+        <div class="card-header">
+            <div class="colpostavatar">
+                <a routerLink="/users/{{ip.user.id_user}}" target="_blank">
+                    <img src="{{ip.user.image_user}}" alt="{{ip.user.username}}" class="img-fluid imgavatar" />
+                    <span class="username ms-2">{{ip.user.username}}</span>
+                </a>
+            </div>
+            <div class="colpostaction">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownAction{{i}}" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-three-dots"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownAction{{i}}">
+                      <li><a class="dropdown-item" href="#edit">Editar</a></li>
+                      <li><a class="dropdown-item" href="#delete">Apagar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="{{ip.image_post}}" class="card-img-top" alt="Image post cover" />
+        <div class="card-body">
+            <div class="card-text" [innerHtml]="ip.text_post | safeHtml"></div>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex flex-row justify-content-center align-items-center">
+                <div class="colreactions justify-content-center align-items-start" *ngFor="let ipr of ip.reactions; index as irx">
+                    <div class="colreactlike" *ngIf="ipr.type_reaction == 'like'">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                        <span>{{ipr.num_reaction}}</span>
+                    </div>
+                    <div class="colreactdislike" *ngIf="ipr.type_reaction == 'dislike'">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                        <span>{{ipr.num_reaction}}</span>
+                    </div>
+                </div>
+                <div class="colncount justify-content-center align-items-end ms-2">
+                    <div class="colncom">
+                        <i class="bi bi-chat-square-fill"></i>
+                        <span>{{ip.comments.length + ip.comments[0].replies.length}}</span>
+                    </div>
+                    <div class="colnshare">
+                        <i class="bi bi-share-fill"></i>
+                        <span>{{ip.shares.num_share}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="colcomments mt-3" *ngFor="let ipc of ip.comments; index as ix">
+                <div class="commentblk">
+                    <div class="d-block">
+                        <img src="{{ip.user.image_user}}" alt="{{ip.user.username}}" class="img-fluid imgavatar" routerLink="/users/{{ip.user.id_user}}" />
+                    </div>
+                    <div class="d-block ms-2">
+                        <p>Id comment: {{ipc.id_comment}}</p>
+                        <p>{{ipc.text_comment}}</p>
+                    </div>
+                </div>
+                <div class="replyblk ms-3 mt-3" *ngFor="let ipcr of ipc.replies; index as ixr">
+                    <div class="d-block">
+                        <img src="{{ip.user.image_user}}" alt="{{ip.user.username}}" class="img-fluid imgavatar" routerLink="/users/{{ip.user.id_user}}" />
+                    </div>
+                    <div class="d-block ms-2">
+                        <p>Id reply: {{ipcr.id_reply}}</p>
+                        <p>{{ipcr.text_reply}}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>

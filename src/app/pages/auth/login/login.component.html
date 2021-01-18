@@ -1,0 +1,29 @@
+<div class="col-12 collog">
+    <div class="col-12 col-md-6 collogimg">
+        <img src="assets/images/home.png" class="img-fluid imglogcover" />
+    </div>
+    <div class="col-12 col-md-6 collogtxt">
+        <div class="blklogcenter">
+            <form [formGroup]="formLog" (ngSubmit)="onSubmit()">
+                <div class="form-inp">
+                    <label for="username">Nome do utilizador: </label>
+                    <input type="username" class="form-control" formControlName="username" required />
+                </div>
+                <div class="form-inp mt-3">
+                    <label for="password">Palavra-passe do utilizador: </label>
+                    <input type="password" class="form-control" formControlName="password" required />
+                </div>
+                <div class="form-inp mt-3">
+                    <button type="reset" class="btn btn-primary">Limpar</button>
+                    <button type="submit" class="btn btn-primary ms-2">Enviar</button>
+                </div>
+            </form>
+
+            <div class="blkbtns mx-auto mt-3">
+                <a routerLink="/register" class="btn btn-primary">Registrar</a>
+                <a routerLink="/home" class="btn btn-primary ms-2">Voltar</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

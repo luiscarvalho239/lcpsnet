@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background: rgb(112, 112, 112); 
+    color: white; 
+    box-sizing: border-box;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.dropdown-toggle::after {
+    display:none !important;
+}
+
+.bi {
+    font-size: 1rem;
+    line-height: 0;
+    margin: auto 3px;
+}
+
+.img-rounded {
+    border: 0;
+    border-radius: 50%;
+}
+
+.smallimg {
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+form {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    input {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.form-inp {
+    display: block;
+}
+button {
+    display: block;
+}
+.card {
+    color: black;
+}
+.hidden { display: none; margin: 0; padding: 0; }
+a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+img {
+    &:hover {
+        cursor: pointer;
+    }
+}
+i, .bi {
+    cursor: pointer;
+}
+.bi-hand-thumbs-up, .bi-hand-thumbs-up-fill {
+    &:hover {
+        color: green;
+    }
+}
+.bi-hand-thumbs-down, .bi-hand-thumbs-down-fill {
+    &:hover {
+        color: red;
+    }
+}
+.bi-chat-square, .bi-chat-square-fill {
+    &:hover {
+        color: blue;
+    }
+}
+.bi-share, .bi-share-fill {
+    &:hover {
+        color: rgb(200, 200, 4);
+    }
+}

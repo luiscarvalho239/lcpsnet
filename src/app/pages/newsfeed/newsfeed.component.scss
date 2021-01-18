@@ -1,0 +1,50 @@
+.colnewsfeed {
+    .colsideleft {
+        display: block;
+        position: relative;
+        color: black;
+        padding: 15px;
+        float: left;
+    }
+    
+    .colsidecenter {
+        display: block;
+        position: relative;
+        color: black;
+        padding: 15px;
+        float: left;
+    }
+    
+    .colsideright {
+        display: block;
+        position: relative;
+        color: black;
+        padding: 15px;
+        float: left;
+    }
+
+    .avatarblk {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: center;
+        background: white;
+        color: black;
+        padding: 15px;
+    }
+
+    .aboutblk {
+        background: white;
+        color: black;
+        padding: 15px;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .avatarblk {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
